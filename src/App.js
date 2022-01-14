@@ -21,7 +21,7 @@ function App() {
     );
   
   const addNewTask = (f,l,n,i) => {
-    console.log(f, l, n, i);
+    // console.log(f, l, n, i);
     // let newStudent = Student
     // newStudent.push()
     setStudent([...Student, new Liste(Student.length + 1, f, l, n, i)]);
@@ -32,6 +32,22 @@ function App() {
     setStudent ([...Student.filter(t=>t.id != idtask)])
     
   }
+  const update = (idup, fnup, lnup, nup, imup) => {
+    console.log(idup, fnup, lnup, nup, imup);
+    //copier la list pred
+    let newListTach = Student
+    //faire le changement sur la new list
+    newListTach.forEach(t => {
+      if (t.id == idup) {
+        t.fName = fnup
+        t.lName = lnup
+        t.Note = nup
+        t.Image = imup
+      }
+       setStudent([...newListTach]);
+    })
+    
+  }
 
   return (
     <div id="cont" className="container  ">
@@ -40,7 +56,7 @@ function App() {
       {/* StudentList */}
       <StudAdd addNewTask={addNewTask} />
       {/* student */}
-      <StudList student={Student} deleteStud={deleteStud} />
+      <StudList student={Student} deleteStud={deleteStud}  update = {update}/>
     </div>
   );
 }

@@ -121,7 +121,7 @@ function StudAdd(props) {
                             Add
                           </button>
                           <br />
-                          {/* UPDATE BUTTON */}
+                          {/* UPDATE BUTTON
                           <button
                             id="updtBtn"
                             className="btn btn-success mx-auto  w-50 fw-bold text-warning d-none"
@@ -130,7 +130,7 @@ function StudAdd(props) {
                           </button>
                           <h5 id="h5" className="d-none">
                             Please fill in the fields correctly
-                          </h5>
+                          </h5> */}
                         </section>
                       </main>
                     );
