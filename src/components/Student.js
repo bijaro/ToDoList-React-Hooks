@@ -1,46 +1,34 @@
-import React from 'react'
-import List from './List';
+import React from "react";
 
-function Student() {
-                    return (
-                      <div>
-                        <div className="mt-3 mx-auto w-75 bg-light text-center">
-                          <div className="pt-3 d-flex justify-content-start align-items-center flex-wrap">
-                            <h6 className="text-warning bg-light w-25">
-                              STUD NUMBER :
-                            </h6>
-                            <h6 id="numE" />
-                            <h6 className="text-warning bg-light w-25">
-                              General average :
-                            </h6>
-                            <h6 id="gen" />
-                          </div>
-                          {/* stud adm stud non adm */}
-                          <h6 className="mt-3 text-warning bg-light w-25">
-                            List of Students
-                          </h6>
-                          <table className="table text-danger w3-container w3-center w3-animate-left">
-                            <thead>
-                              <tr id="m">
-                                <th scope="col">Picture</th>
-                                <th scope="col">First name</th>
-                                <th scope="col">Last name</th>
-                                <th scope="col">Note</th>
-                                <th scope="col">#</th>
-                              </tr>
-                            </thead>
-                            <tbody
-                              id="tab"
-                              className="text-dark mx-auto"  >
-                                                                                                               <List/>
-
+function Student({stud}) {
+  return (
+    <>
+      <tr>
+        <td className="w-25">
+          <img
+            src={stud.Image} 
+            className="w3-circle  "
+            style={{ width: "30%", height:"30%" }}
+            
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          />
+        </td>
+        <td>{stud.fName}</td>
+        <td>{stud.lName}</td>
+        <td>{stud.Note}</td>
+        <th scope="row">
           
-                            </tbody>
-                          </table>
-                          
-                        </div>
-                      </div>
-                    );
+          <button className="text-success  border-light">
+            <i className="fas fa-edit" />
+          </button>
+          <button className="border-light">
+            <i className="far fa-trash-alt text-danger"> </i>
+          </button>
+        </th>
+      </tr>
+    </>
+  );
 }
 
-export default Student
+export default Student;
