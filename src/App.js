@@ -22,11 +22,17 @@ function App() {
   
   const addNewTask = (f,l,n,i) => {
     console.log(f, l, n, i);
-    let newStudent = Student
-    newStudent.push(new Liste(Student.length + 1, f, l, n, i))
-    setStudent([...newStudent])
+    // let newStudent = Student
+    // newStudent.push()
+    setStudent([...Student, new Liste(Student.length + 1, f, l, n, i)]);
      
   }
+  const deleteStud = (idtask) => {
+    alert(idtask);
+    setStudent ([...Student.filter(t=>t.id != idtask)])
+    
+  }
+
   return (
     <div id="cont" className="container  ">
       {/* header  search input */}
@@ -34,7 +40,7 @@ function App() {
       {/* StudentList */}
       <StudAdd addNewTask={addNewTask} />
       {/* student */}
-      <StudList student={Student} />
+      <StudList student={Student} deleteStud={deleteStud} />
     </div>
   );
 }

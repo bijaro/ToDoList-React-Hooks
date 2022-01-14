@@ -22,17 +22,23 @@ function StudList(props) {
                           <table className="table text-danger w3-container w3-center w3-animate-left">
                             <thead>
                               <tr id="m">
-                                <th >Picture</th>
-                                <th >First name</th>
-                                <th >Last name</th>
-                                <th >Note</th>
-                                <th >#</th>
+                                <th>Picture</th>
+                                <th>First name</th>
+                                <th>Last name</th>
+                                <th>Note</th>
+                                <th>#</th>
                               </tr>
                             </thead>
                             <tbody id="tab" className="text-dark mx-auto">
-                              {props.student.sort((a,b)=>b.id -a.id).map((t) => (
-                                <Student key={t.id } stud = {t}/> 
-                              ))}
+                              {props.student
+                                .sort((a, b) => b.id - a.id)
+                                .map((t) => (
+                                  <Student
+                                    key={t.id}
+                                    stud={t}
+                                    deleteStud={props.deleteStud}
+                                  />
+                                ))}
                             </tbody>
                           </table>
                         </div>
