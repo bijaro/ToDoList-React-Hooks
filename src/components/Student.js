@@ -36,8 +36,8 @@ function Student({ stud, deleteStud,editTask }) {
           </button>
           <button
             className="border-light"
-            data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop"
+            // data-bs-toggle="modal"
+            // data-bs-target="#staticBackdrop"
             onClick={handleclick}
           >
             <i className="far fa-trash-alt text-danger"> </i>

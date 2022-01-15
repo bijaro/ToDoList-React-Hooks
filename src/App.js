@@ -28,10 +28,11 @@ function App() {
      
   }
   const deleteStud = (idtask) => {
-    alert(idtask);
+    // alert(idtask);
     setStudent ([...Student.filter(t=>t.id != idtask)])
     
   }
+  
   const update = (idup, fnup, lnup, nup, imup) => {
     console.log(idup, fnup, lnup, nup, imup);
     //copier la list pred
