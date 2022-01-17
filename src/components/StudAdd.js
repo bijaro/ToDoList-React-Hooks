@@ -55,16 +55,18 @@ function StudAdd(props) {
     bg-light
     mt-3
     mx-auto
-    w-50
+    w-75
     fw-bolder
-    text-danger text-center
+    text-secondary text-center
     w3-container w3-center w3-animate-left
 
   "
                       >
                         {/* firstname */}
-                        <section className="d-flex justify-content-between align-items-center m-4">
-                          <label id="fN">First Name</label>
+                        <section className="d-flex justify-content-between align-items-center p-2 m-4">
+                          <label className="w-25" id="fN">
+                            First Name
+                          </label>
                           <input
                             id="fNV"
                             className="w-50 shadow form-control"
@@ -77,8 +79,10 @@ function StudAdd(props) {
                           />
                         </section>
                         {/*last name  */}
-                        <section className="d-flex justify-content-between align-items-center m-4">
-                          <label id="dN">Last Name</label>
+                        <section className="d-flex justify-content-between align-items-center p-2 m-4">
+                          <label className="w-25" id="dN">
+                            Last Name
+                          </label>
                           <input
                             id="dNV"
                             className="w-50 shadow form-control"
@@ -88,8 +92,10 @@ function StudAdd(props) {
                           />
                         </section>
                         {/* note */}
-                        <section className="d-flex justify-content-between align-items-center m-4">
-                          <label id="nS">Note student</label>
+                        <section className="d-flex justify-content-between align-items-center p-2 m-4">
+                          <label className="w-25" id="nS">
+                            Note student
+                          </label>
                           <input
                             id="nSV"
                             className="w-50 shadow form-control"
@@ -99,8 +105,8 @@ function StudAdd(props) {
                           />
                         </section>
                         {/* Picture */}
-                        <section className="d-flex justify-content-between align-items-center m-4">
-                          <label>Picture</label>
+                        <section className="d-flex justify-content-between align-items-center p-2 m-4">
+                          <label className="w-25">Picture</label>
                           <input
                             id="im"
                             className="w-50 shadow form-control"
@@ -113,9 +119,9 @@ function StudAdd(props) {
                         <section className="text-center p-3 m-5 ">
                           <button
                             id="addBtn"
-                            className="btn btn-warning
+                            className="btn  btn-outline-warning
                             *
-                             w-50 fw-bold mx-auto text-danger"
+                             w-50 fw-bold mx-auto text-secondary"
                             onClick={handleClick}
                           >
                             Add

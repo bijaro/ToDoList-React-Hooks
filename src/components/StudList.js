@@ -5,7 +5,8 @@ import Student from './Student';
 function StudList(props) {
 
   const [idedit, setidedit] = useState()
-    const fNameRef = useRef();
+  const fNameRef = useRef();
+  
     const lNameRef = useRef();
     const noteRef = useRef();
   const imageRef = useRef();
@@ -31,7 +32,7 @@ function StudList(props) {
                     return (
                       <div>
                         <div className="mt-3 mx-auto w-75 bg-light text-center">
-                          <div className="pt-3 d-flex justify-content-start align-items-center flex-wrap">
+                          <div className="pt-3 d-flex justify-content-between align-items-center flex-wrap">
                             <h6 className="text-warning bg-light w-25">
                               STUD NUMBER :
                             </h6>
@@ -40,12 +41,13 @@ function StudList(props) {
                               General average :
                             </h6>
                             <h6 id="gen" />
+                            <h6 className="mt-3 text-warning bg-light w-25">
+                              List of Students
+                            </h6>
                           </div>
                           {/* stud adm stud non adm */}
-                          <h6 className="mt-3 text-warning bg-light w-25">
-                            List of Students
-                          </h6>
-                          <table className="table text-danger w3-container w3-center w3-animate-left">
+
+                          <table className="table text-secondary w3-container w3-center w3-animate-left">
                             <thead>
                               <tr id="m">
                                 <th>Picture</th>
@@ -106,7 +108,7 @@ function StudList(props) {
      mx-auto
    
     fw-bolder
-    text-danger text-center
+    text-secondary shadow text-center
     w3-container w3-center w3-animate-left
 
   "
