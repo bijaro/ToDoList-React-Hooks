@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 
-function SearchList() {
+function SearchList(props) {
+  const searchRef = useRef()
+ 
+  const handlekeyup = () => {
+    const searchValue = searchRef.current.value;
+    props.SearchV(searchValue)
+
+    // props.researchKey 
+  }
+
   return (
     <div>
       <header
@@ -13,9 +22,13 @@ function SearchList() {
           type="search"
           placeholder="Search a student"
           aria-label="Search"
-          
+          ref={searchRef}
+          onKeyUp={handlekeyup}
         />
-        <i style={{ position: "absolute", right: "26%" }} className="fas fa-search text-black" />
+        <i
+          style={{ position: "absolute", right: "26%" }}
+          className="fas fa-search text-black"
+        />
       </header>
     </div>
   );

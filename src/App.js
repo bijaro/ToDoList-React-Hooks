@@ -10,21 +10,16 @@ import { useState } from "react";
 import { List_Task } from './data/List_Task';
 
 function App() {
-    const [Student, setStudent] = useState(List_Task
-      // new Liste(
-      //   1,
-      //   "Lalej",
-      //   "Mehdi",
-      //   17,
-      //   "https://fr.le7tv.ma/wp-content/uploads/2021/10/B3101947-D188-4B35-9343-A9115C3B7096-780x470.jpeg"
-      // ),
-    );
+  const [Student, setStudent] = useState(List_Task);
+   const [StudentOrigin, setStudentOrigin] = useState(List_Task);
   
   const addNewTask = (f,l,n,i) => {
     // console.log(f, l, n, i);
     // let newStudent = Student
     // newStudent.push()
     setStudent([...Student, new Liste(Student.length + 1, f, l, n, i)]);
+     setStudentOrigin([...Student, new Liste(Student.length + 1, f, l, n, i)]);
+
      
   }
   const deleteStud = (idtask) => {
@@ -50,14 +45,26 @@ function App() {
     
   }
 
+  const SearchV = (search) => {
+
+    if (search === "") {
+      setStudent([...StudentOrigin]);
+    }
+    else {
+      setStudent([...Student.filter(t => (t.fName.toUpperCase()
+        .includes(search.toUpperCase())))])
+    }
+
+  }
+
   return (
     <div id="cont" className="container  ">
       {/* header  search input */}
-      <SearchList />
+      <SearchList SearchV={SearchV} />
       {/* StudentList */}
       <StudAdd addNewTask={addNewTask} />
       {/* student */}
-      <StudList student={Student} deleteStud={deleteStud}  update = {update}/>
+      <StudList student={Student} deleteStud={deleteStud} update={update} />
     </div>
   );
 }

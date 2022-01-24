@@ -5,7 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-   background-image: url("https://mdbootstrap.com/img/new/standard/nature/184.jpg");
+   background-image: url("./components/pexels-janko-ferlic-590493.jpg")
+   ;
+   background-size: cover;
+   /* background-position: 100% 100%; */
    
 }
 
