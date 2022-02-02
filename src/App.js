@@ -10,20 +10,21 @@ import { useState } from "react";
 import { List_Task } from './data/List_Task';
 
 function App() {
+
   const [Student, setStudent] = useState(List_Task);
    const [StudentOrigin, setStudentOrigin] = useState(List_Task);
   
-  const addNewTask = (f,l,n,i) => {
-    // console.log(f, l, n, i);
-    // let newStudent = Student
-    // newStudent.push()
-    setStudent([...Student, new Liste(Student.length + 1, f, l, n, i)]);
-     setStudentOrigin([...Student, new Liste(Student.length + 1, f, l, n, i)]);
-
-     
+  //StudAdd
+  const addNewTask = (fname,lname,note,image) => {
+    
+    setStudent([...Student, new Liste(Student.length + 1, fname, lname, note, image)]);
+     setStudentOrigin([...Student, new Liste(Student.length + 1, fname, lname, note, image)]);
+  
   }
+
+  //deleteStud
   const deleteStud = (idtask) => {
-    // alert(idtask);
+    
     setStudent ([...Student.filter(t=>t.id != idtask)])
     
   }
@@ -44,22 +45,31 @@ function App() {
     })
     
   }
-
+//SearchList by First Name || last name || note
   const SearchV = (search) => {
 
     if (search === "") {
       setStudent([...StudentOrigin]);
     }
     else {
-      setStudent([...Student.filter(t => (t.fName.toUpperCase()
-        .includes(search.toUpperCase())))])
+      setStudent([
+        ...Student.filter((t) =>
+          t.fName.toUpperCase().includes(search.toUpperCase()
+          )
+        )
+        
+      ]);
+
+      setStudent([...Student.filter(t=>t.lName.toUpperCase().includes(search.toUpperCase()))])
     }
+
+    setStudent([...Student.filter(t => t.Note.includes(search))])
 
   }
 
   return (
-    <div id="cont" className="container  ">
-      {/* header  search input */}
+    <div  classNam="container  ">
+      {/*  search input */}
       <SearchList SearchV={SearchV} />
       {/* StudentList */}
       <StudAdd addNewTask={addNewTask} />

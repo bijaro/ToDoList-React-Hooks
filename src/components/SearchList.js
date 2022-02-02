@@ -1,13 +1,12 @@
 import React, { useRef } from "react";
 
 function SearchList(props) {
+  //useRef 
   const searchRef = useRef()
- 
+ //onKeyUp
   const handlekeyup = () => {
     const searchValue = searchRef.current.value;
-    props.SearchV(searchValue)
-
-    // props.researchKey 
+    props.SearchV(searchValue) 
   }
 
   return (
@@ -17,8 +16,8 @@ function SearchList(props) {
         style={{ position: "relative" }}
       >
         <input
-          id="filter"
-          className="form-control w-50 mx-4"
+          
+          className="form-control w-50 mx-4 rounded-3"
           type="search"
           placeholder="Search a student"
           aria-label="Search"

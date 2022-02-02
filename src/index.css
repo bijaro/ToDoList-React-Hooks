@@ -16,3 +16,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* 
+@media screen and (max-width : 400px) {
+  .elements {
+    display: block !important ;
+    text-align: center;
+
+  }
+  #nSV {
+    width: 75% !important;
+    text-align: center;
+    margin-left:  auto;
+    margin-right: auto;
+  }
+} */

@@ -32,7 +32,7 @@ function StudList(props) {
                     return (
                       <div>
                         <div className="mt-3 mx-auto w-75 bg-light text-center">
-                          <div className="pt-3 d-flex justify-content-between align-items-center flex-wrap">
+                          {/* <div className="pt-3 d-flex justify-content-between align-items-center flex-wrap">
                             <h6 className="text-warning bg-light w-25">
                               STUD NUMBER :
                             </h6>
@@ -44,12 +44,13 @@ function StudList(props) {
                             <h6 className="mt-3 text-warning bg-light w-25">
                               List of Students
                             </h6>
-                          </div>
+                          </div> */}
                           {/* stud adm stud non adm */}
-
+{/* 
+                          //studentList */}
                           <table className="table text-secondary w3-container w3-center w3-animate-left">
                             <thead>
-                              <tr id="m">
+                              <tr >
                                 <th>Picture</th>
                                 <th>First name</th>
                                 <th>Last name</th>
@@ -57,7 +58,7 @@ function StudList(props) {
                                 <th>#</th>
                               </tr>
                             </thead>
-                            <tbody id="tab" className="text-dark mx-auto">
+                            <tbody  className="text-dark mx-auto">
                               {props.student
                                 .sort((a, b) => b.id - a.id)
                                 .map((t) => (
