@@ -1,19 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-//https://www.geeksforgeeks.org/how-to-use-bootstrap-with-react/
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { createStore } from "redux";
+import { TodoModel } from "./modal/todo";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const stateTodos = [];
+
+//types todo
+const TODO_ADD = "todo/add";
+const TODO_DEL = "todo/del";
+
+//todo reducer def avec initialisation de prevState
+const todoReducer = (prevState = stateTodos, action) => {
+  switch (action.type) {
+    case TODO_ADD:
+      return [...prevState, { ...action.payload }];
+
+    case TODO_DEL:
+      return [...prevState.filter((t) => t.id != action.payload.deletedID)];
+    default:
+      return prevState;
+  }
+};
+
+//utilisation de la fonction
+const store = createStore(
+  todoReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
+//
+// store.subscribe((state) => {
+//   console.log(state.getstate());
+// })
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//add
+store.dispatch({
+  type: TODO_ADD,
+  payload : new TodoModel (1,'task1')
+})
