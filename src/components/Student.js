@@ -17,7 +17,7 @@ function Student({ stud, deleteStud,editTask }) {
           <img
             src={stud.Image}
             className="w3-circle  "
-            style={{ width: "30%", height: "30%" }}
+            style={{ width: "20%", height: "20%" }}
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
           />

@@ -40,8 +40,6 @@ function StudAdd(props) {
     bg-light
     mt-3
    mx-auto
-
-
   col-xs-12 col-sm-8
     fw-bolder
     text-secondary text-center
@@ -50,7 +48,7 @@ function StudAdd(props) {
   "
     >
       {/* firstname */}
-      <section className=" d-lg-flex d-sm-block  justify-content-between align-items-center p-2 m-4">
+      <section className=" d-lg-flex d-sm-block  justify-content-around align-items-center p-2 m-lg-4 m-sm-1">
         <label className="col-md-4  w-50 mx-auto " id="fN">
           First Name
         </label>
@@ -66,8 +64,8 @@ function StudAdd(props) {
         />
       </section>
       {/*last name  */}
-      <section className=" d-lg-flex d-sm-block  justify-content-between align-items-center p-2 m-4 ">
-        <label className="col-md-4  w-50 mx-auto " id="dN">
+      <section className=" d-lg-flex d-sm-block  justify-content-around align-items-center p-2 m-4 ">
+        <label className="col-md-4  w-50 text-center " id="dN">
           Last Name
         </label>
         <input
@@ -79,8 +77,8 @@ function StudAdd(props) {
         />
       </section>
       {/* note */}
-      <section className="  d-lg-flex d-sm-block  justify-content-between align-items-center ">
-        <label className="col-md-4  w-50 mx-auto  mx-xs-auto  mx-lg-center ">
+      <section className="  d-lg-flex d-sm-block  justify-content-between align-items-center p-2 m-4">
+        <label className="col-md-4  w-50   text-center ">
           Note student
         </label>
         <input
