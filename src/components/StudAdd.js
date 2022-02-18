@@ -48,13 +48,13 @@ function StudAdd(props) {
   "
     >
       {/* firstname */}
-      <section className=" d-lg-flex d-sm-block  justify-content-around align-items-center p-2 m-lg-4 m-sm-1">
-        <label className="col-md-4  w-50 mx-auto " id="fN">
+      <section className=" d-lg-flex d-sm-block  justify-content-around align-items-center  mt-5">
+        <label className="mx-auto w-40  " >
           First Name
         </label>
         <input
           id="fNV"
-          className=" col-md-4 w-50 mx-auto  shadow form-control"
+          className="  w-50 mx-auto  shadow form-control"
           placeholder="First Name"
           type="text"
           required
@@ -64,41 +64,37 @@ function StudAdd(props) {
         />
       </section>
       {/*last name  */}
-      <section className=" d-lg-flex d-sm-block  justify-content-around align-items-center p-2 m-4 ">
-        <label className="col-md-4  w-50 text-center " id="dN">
+      <section className=" d-lg-flex d-sm-block  justify-content-around align-items-center  mt-5 ">
+        <label className="mx-auto  w-40 text-center " id="dN">
           Last Name
         </label>
         <input
-          id="dNV"
-          className=" col-md-4 w-50 mx-auto shadow form-control"
+          
+          className="w-50 mx-auto  shadow form-control"
           placeholder="Last Name"
           type="text"
           ref={lNameRef}
         />
       </section>
       {/* note */}
-      <section className="  d-lg-flex d-sm-block  justify-content-between align-items-center p-2 m-4">
-        <label className="col-md-4  w-50   text-center ">
-          Note student
-        </label>
+      <section className="  d-lg-flex d-sm-block  justify-content-around align-items-center  mt-5">
+        <label className=" mx-auto w-40   text-center ">Note student</label>
         <input
-          // id="nSV"
-          className=" col-md-4 w-50 mx-auto 
           
-         overflow-none shadow form-control"
+          className=" w-50 mx-auto  shadow form-control"
           placeholder="Note Student"
           type="text"
           ref={noteRef}
         />
       </section>
       {/* Picture */}
-      <section className=" d-lg-flex d-sm-block  justify-content-between align-items-center  p-2 m-4">
-        <label className="col-md-4  w-50 mx-xs-auto mx-lg-center  ">
+      <section className=" d-lg-flex d-sm-block  justify-content-around align-items-center  mt-5">
+        <label className="mx-auto w-40 text-center">
           Picture
         </label>
         <input
-          id="im"
-          className="   col-md-4 w-50 mx-auto overflow-none shadow form-control"
+       
+          className=" w-50 mx-auto  shadow form-control"
           placeholder="URL Of Picture 😊"
           type="text"
           ref={imageRef}

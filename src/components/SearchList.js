@@ -17,7 +17,7 @@ function SearchList(props) {
       >
         <input
           
-          className="form-control w-50 mx-4 rounded-3"
+          className="form-control  w-50 mx-4 px-5 rounded-3"
           type="search"
           placeholder="Search a student"
           aria-label="Search"
@@ -25,7 +25,7 @@ function SearchList(props) {
           onKeyUp={handlekeyup}
         />
         <i
-          style={{ position: "absolute", right: "26%" }}
+          style={{ position: "absolute", left: "26%" }}
           className="fas fa-search text-black"
         />
       </header>
